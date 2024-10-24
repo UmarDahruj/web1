@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Umar Saleh</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Times New Roman', Times, serif;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .background {
+            background-image: url(gambar/bg.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .navbar {
+            transition: background 0.3s ease-in-out;
+        }
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.9) !important;
+        }
+        .content {
+            padding: 60px 20px;
+            color: #ffffff;
+            text-align: center;
+            margin-top: 80px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile-picture {
+            flex: 1;
+            max-width: 200px;
+            margin-right: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1s forwards;
+        }
+        .profile-picture img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .content-text {
+            flex: 2;
+            text-align: left;
+        }
+        .content h1 {
+            font-size: 50px;
+            font-weight: 300;
+            margin: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .content p {
+            margin-top: 20px;
+            max-width: 800px;
+            text-align: justify;
+            line-height: 1.6;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 40px;
+            }
+            .profile-picture {
+                max-width: 150px;
+            }
+        }
+        @media (max-width: 480px) {
+            .content h1 {
+                font-size: 32px;
+            }
+            .profile-picture {
+                max-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <!-- Bootstrap Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Umar Saleh</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">PROFILE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="form.html">FORM</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="profile-picture">
+                <img src="gambar/profile.jpg" alt="Foto Profile Umar Saleh">
+            </div>
+            <div class="content-text">
+                <h1>Ahlan Wa Sahlan</h1>
+                <p>Izinkan saya untuk memperkenalkan diri. Nama saya Umar Saleh. Saya lahir di Pekalongan, pada 27 Juni 2003. Makanan favorit saya adalah megono, sedangkan minuman favorit saya adalah air zam zam. Saya sangat suka Bermain Mobile Legend Bersama Teman-Teman. Saya juga suka membaca buku-buku filsafat di waktu senggang. Saya mempunyai hobi bermain game. Berikut perkenalan saya. Terima kasih.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // JavaScript untuk menambahkan efek scroll pada navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

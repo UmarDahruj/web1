@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Umar Saleh</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Times New Roman', Times, serif;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .background {
+            background-image: url(gambar/bg.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .navbar {
+            transition: background 0.3s ease-in-out;
+        }
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.9) !important;
+        }
+        .content h1 {
+            font-size: 50px;
+            font-weight: bold;
+            margin: 0;
+            color: #fff;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .content h2 {
+            font-size: 25px;
+            font-weight: 300;
+            margin: 10px 0;
+            animation: fadeIn 1.5s ease-in-out;
+            color: #7bb0ff;
+        }
+        .contact-info {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+            color: #ddd;
+        }
+        .contact-item strong {
+            color: #7bb0ff;
+        }
+        .contact-item a {
+            color: #7bb0ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-item a:hover {
+            color: #ffffff;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 40px;
+            }
+            .content h2 {
+                font-size: 22px;
+            }
+        }
+        @media (max-width: 480px) {
+            .content h1 {
+                font-size: 32px;
+            }
+            .content h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <!-- Bootstrap Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Umar Saleh</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html">PROFILE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galery.html">GALLERY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="form.html">FORM</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Content Section -->
+        <div class="container mt-5 pt-5 content">
+            <h1>KONTAK PRIBADI</h1>
+            <h2>Hubungi Saya</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email:</strong>
+                    <a href="mailto:umardahruj@gmail.com">umardahruj@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Telepon:</strong>
+                    <a href="https://wa.me/6282313852029">0823-1385-2029</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Alamat:</strong>
+                    <p>Klego Kota Pekalongan, Jawa Tengah, Indonesia</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // JavaScript untuk menambahkan efek scroll pada navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
